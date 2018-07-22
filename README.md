@@ -11,7 +11,6 @@ A Sample project that uses ViewModels, LiveData, Locale Cache with Room and Data
 - Room
 - LiveData
 - Data Binding
-- RxJava2
 - Dagger2
 - OkHttp3
 - Retrofit2
