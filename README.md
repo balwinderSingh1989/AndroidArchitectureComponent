@@ -1,6 +1,6 @@
 Android Architecture Components Sample -
 
-A Sample project of the news app that uses ViewModels, LiveData, Locale Cache with Room and Data Binding with an MVVM architecture.
+A Sample project that uses ViewModels, LiveData, Locale Cache with Room and Data Binding as per android architecture components guildlines.
 
 <p align="center">
         <img src="https://github.com/balwinderSingh1989/AndroidArchitectureComponent/blob/master/Images/arch.png" width="600" height="600"/>
