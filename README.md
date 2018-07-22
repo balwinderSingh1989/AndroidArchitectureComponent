@@ -1,6 +1,6 @@
-Android Architecture Components Sample -
+## Android Architecture Components Sample -
 
-A Sample project that uses ViewModels, LiveData, Locale Cache with Room and Data Binding as per android architecture components guildlines.This project can be used as an architecture for app that would interact with web server or deals with database.
+A Sample project that uses ViewModels, LiveData, Locale Cache with Room and Data Binding as per android architecture components guildlines.This project can be used as an architecture for a any  app dvevelopment that would interact with web server or deals with database.
 
 <p align="center">
         <img src="https://github.com/balwinderSingh1989/AndroidArchitectureComponent/blob/master/Images/arch.png" width="600" height="500"/>
