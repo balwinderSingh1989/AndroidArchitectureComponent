@@ -19,7 +19,8 @@ A Sample project of the news app that uses ViewModels, LiveData, Locale Cache wi
 
 
 ### Reporting Issues
-The project is still under development, especially I am trying to learn more about popular patterns and Dagger2 but you can report issues or create with feature tag to discuss about ideas for keep project under development. I am thinking to start a blog series for describe what I did in this project. Keep in touch -> [Medium](https://medium.com/@ihsanbal)
+The project is still under development, especially I am trying to learn more about popular patterns and Dagger2 but you can report issues or create with feature tag to discuss about ideas for keep project under developmen.
+ Keep in touch -> [Linkdin](https://www.linkedin.com/in/balwinder-singh-29039b56/)
 ### Next Steps
 - Build Unit & UI tests
 - Duplicate project with Kotlin
