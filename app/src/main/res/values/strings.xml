@@ -1,0 +1,5 @@
+<resources>
+    <string name="mis_permission_dialog_title">Permission Deny</string>
+
+    <!--...splash screen...-->
+</resources>

@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "er.arch.design.bluerprint"
+        minSdkVersion 18
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    dataBinding {
+        enabled = true
+    }
+    flavorDimensions "mode"
+
+    productFlavors {
+        staging{
+            applicationIdSuffix ".Staging"
+            dimension "mode"
+            versionCode 3
+            versionName "1.2.0"
+            resValue "string", "app_name", "MyApp-STG"
+            manifestPlaceholders = [appIcon: "@mipmap/ic_launcher"]
+            buildConfigField("String","BASE_URL","\"https://api.github.com/\"")
+            buildConfigField("String","BUILD_NAME","\"Staging\"")
+        }
+
+        production{
+            applicationId "er.arch.design.bluerprint"
+            dimension "mode"
+            versionCode 3
+            versionName "1.2.0"
+            resValue "string", "app_name", "Masaha"
+            manifestPlaceholders = [appIcon: "@mipmap/ic_launcher"]
+            buildConfigField("String","BASE_URL","\"https://api.github.com/\"")
+            buildConfigField("String","BUILD_NAME","\"Production\"")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //support lib
+    implementation rootProject.ext.supportLibAppCompat
+    implementation rootProject.ext.supportLibDesign
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    implementation rootProject.ext.archRuntime
+    implementation rootProject.ext.archExtension
+    annotationProcessor rootProject.ext.archCompiler
+
+    implementation rootProject.ext.roomRuntime
+    annotationProcessor rootProject.ext.roomCompiler
+    implementation rootProject.ext.logginInterceptor
+
+    implementation rootProject.ext.okhttp
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.gsonConverter
+
+    //dagger
+    annotationProcessor rootProject.ext.daggerCompiler
+    implementation rootProject.ext.dagger
+    implementation rootProject.ext.daggerAndroid
+    implementation rootProject.ext.daggerAndroidSupport
+    annotationProcessor rootProject.ext.daggerAndroidProcessor
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'junit:junit:4.12'
+}
+
